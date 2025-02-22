@@ -1,3 +1,6 @@
 # bookbot
 
-BookBot is my first [Boot.dev](https://www.boot.dev) project!
+To run the program open CLI and run python3 main.py <path_to_book>
+
+
+There should be a count for words and characters.
