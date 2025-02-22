@@ -1,4 +1,11 @@
 from stats import word_counter, character_counter, sort_output
+import sys 
+
+if len(sys.argv) != 2:
+    print("Usage: python3 main.py <path_to_book>")
+
+    sys.exit(1)
+
 
 def get_book_text(filepath):
     with open(filepath) as f:
@@ -11,7 +18,7 @@ def header_output(filepath):
     print("----------- Word Count ----------")
 
 def main():
-    filepath = "books/frankenstein.txt"
+    filepath = sys.argv[1]
     header_output(filepath)
     book_text = get_book_text(filepath)
     word_count = word_counter(book_text)
